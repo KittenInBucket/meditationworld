@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медитация</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Стили для заголовка секции "О медитации" */
+        #about h2 {
+            color: #50b3a2;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Стили для кнопки с классом .button */
+        .button {
+            background-color: #50b3a2;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #50b3a2;
+        }
+
+        /* Стили для изображений в секции "Виды медитации" */
+        .meditation-image {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .meditation-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <div class="header-content">
+        <i class="fas fa-spa header-icon"></i> <!-- Иконка лотоса -->
+        <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Добро пожаловать в мир медитации</h1>
+        <p class="header-subtitle">Откройте для себя гармонию, спокойствие и внутреннюю силу через практику медитации.</p>
+    </div>
+    <nav>
+    <!-- Маркированный список -->
+    <ul>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> О медитации</a></li>
+        <li><a href="#types"><i class="fas fa-seedling"></i> Виды медитации</a></li>
+        <li><a href="#benefits"><i class="fas fa-star"></i> Преимущества</a></li>
+        
+        <li><a href="celebrities.html"><i class="fas fa-star"></i> Знаменитости</a></li>
+        <li><a href="history.html"><i class="fas fa-history"></i> История</a></li>
+        <li><a href="https://www.youtube.com/watch?v=LlbAEbBaWFI" class="button">Медитация для начинающих</a></li>
+    </ul>
+     <!-- Кнопка для вызова уведомления -->
+        <div id="output"></div>
+        <button id="myButton" class="greenButton" onclick="greetUser()">Ввести имя</button>
+
+    </section>
+
+    </nav>
+</header>
+
+    <!-- Слайдшоу -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/gallery/thumbs/01.jpg" alt="Слайд 1">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/gallery/thumbs/02.jpg" alt="Слайд 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/gallery/thumbs/03.jpg" alt="Слайд 3">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/gallery/thumbs/04.jpg" alt="Слайд 4">
+        </div>
+
+        <!-- Кнопки "Вперед" и "Назад" -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <section id="about">
+        <h2>О медитации</h2>
+        <div class="about-content">
+            <p>Медитация  — это практика, в которой человек использует технику для тренировки внимания и осознанности и отхода от рефлексивного, «дискурсивного мышления», не осуждая сам процесс медитации. Она помогает установить диалог с самим собой, избавиться от внутренних конфликтов и противоречий, достичь гармонии со всеми гранями своей личности. Медитация практикуется во многих религиозных традициях, а также независимо от каких-либо религиозных или духовных влияний ради пользы для здоровья. Самые ранние упоминания о медитации (дхьяне) встречаются в Упанишадах, и медитация играет важную роль в созерцательном репертуаре джайнизма, буддизма и индуизма.</p>
+            <img src="images/gallery/thumbs/06.jpg" alt="Медитация" class="section-image">
+        </div>
+    </section>
+
+
+    <section id="types">
+    <h2>Виды медитации</h2>
+    <div class="meditation-types">
+        <!-- Трансцендентальная медитация -->
+        <div class="meditation-type">
+            <img src="images/gallery/thumbs/05.jpg" alt="Трансцендентальная медитация" class="meditation-image">
+            <h3>Трансцендентальная медитация</h3>
+            <p>Трансцендентальная медитация — это простая, естественная техника, которая практикуется 20 минут два раза в день, сидя в удобном положении с закрытыми глазами. Она укрепляет нейронные связи между различными участками мозга, что способствует более эффективному усвоению знаний и принятию решений.</p>
+            <a href="https://www.psychologies.ru/standpoint/transtsendentalnaya-meditatsiya-kak-praktikovat-samostoyatelno/" target="_blank" class="button">Узнать больше</a>
+        </div>
+
+        <!-- Медитация осознанности -->
+        <div class="meditation-type">
+            <img src="images/gallery/thumbs/07.jpg" alt="Медитация осознанности" class="meditation-image">
+            <h3>Медитация осознанности</h3>
+            <p>Медитация осознанности — это практика, посредством которой человек учится быть в настоящем моменте и осознавать свои мысли и чувства без оценки. Практика основана на глубоком дыхании и сосредоточении на мыслях и ощущениях в теле. Медитация направлена на обретение душевного спокойствия и восстановление внутренних ресурсов.</p>
+            <a href="https://edprodpo.com/blog/psychology/meditatsiya-osoznannosti/" target="_blank" class="button">Узнать больше</a>
+        </div>
+
+        <!-- Йога-нидра -->
+        <div class="meditation-type">
+            <img src="images/gallery/thumbs/08.jpg" alt="Йога-нидра" class="meditation-image">
+            <h3>Йога-нидра</h3>
+            <p>Йога-нидра, или "йогический сон" — техника расслабления, которая неизбежно приведет к успокоению нервной системы и глубокой психической релаксации. Это знакомое состояние сознания «между сном и бодрствованием», но достигаемое посредством волевого мышечного расслабления и непродолжительной фиксации внимания на зонах и участках тела.</p>
+            <a href="https://www.b17.ru/article/yoga-nidra_psychology/" target="_blank" class="button">Узнать больше</a>
+        </div>
+        
+    </div>
+</section>
+ <!-- Таблица с вложенной таблицей -->
+
+    <section id="benefits">
+    <h2>Преимущества медитации</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Преимущество</th>
+                <th>Описание</th>
+                <th>Советы для практики</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i class="fas fa-heartbeat"></i>Снижение стресса</td>
+                <td>Медитация помогает уменьшить уровень кортизола, гормона стресса, что способствует улучшению общего самочувствия.</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Уровень</th>
+                            <th>Совет</th>
+                        </tr>
+                        <tr>
+                            <td>Начинающий</td>
+                            <td>Начните с 5 минут в день, сосредоточьтесь на дыхании.</td>
+                        </tr>
+                        <tr>
+                            <td>Продвинутый</td>
+                            <td>Практикуйте глубокое дыхание и визуализацию.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-brain"></i>Рост концентрации</td>
+                <td>Регулярная практика повышает внимание и сосредоточенность, что полезно для работы и учебы.</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Уровень</th>
+                            <th>Совет</th>
+                        </tr>
+                        <tr>
+                            <td>Начинающий</td>
+                            <td>Используйте технику "осознанного дыхания" для фокусировки.</td>
+                        </tr>
+                        <tr>
+                            <td>Продвинутый</td>
+                            <td>Практикуйте медитацию с мантрами.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-bed"></i>Улучшение сна</td>
+                <td>Медитация способствует расслаблению, что помогает быстрее засыпать и улучшает качество сна.</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Уровень</th>
+                            <th>Совет</th>
+                        </tr>
+                        <tr>
+                            <td>Начинающий</td>
+                            <td>Практикуйте медитацию перед сном в тихой обстановке.</td>
+                        </tr>
+                        <tr>
+                            <td>Продвинутый</td>
+                            <td>Используйте техники йоги-нидры для глубокого расслабления.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-user"></i>Познание себя</td>
+                <td>Медитация помогает лучше понимать свои эмоции, реакции и мотивы, что способствует личностному росту.</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Уровень</th>
+                            <th>Совет</th>
+                        </tr>
+                        <tr>
+                            <td>Начинающий</td>
+                            <td>Ведите дневник медитации, чтобы отслеживать свои ощущения.</td>
+                        </tr>
+                        <tr>
+                            <td>Продвинутый</td>
+                            <td>Практикуйте медитацию на самоанализ.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-smile"></i>Позитивное настроение</td>
+                <td>Регулярная практика медитации повышает уровень серотонина, что улучшает настроение и снижает тревожность.</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Уровень</th>
+                            <th>Совет</th>
+                        </tr>
+                        <tr>
+                            <td>Начинающий</td>
+                            <td>Практикуйте медитацию благодарности к себе и Вселенной.</td>
+                        </tr>
+                        <tr>
+                            <td>Продвинутый</td>
+                            <td>Используйте визуализацию утром и вечером.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-hand-holding-heart"></i>Развитие эмпатии</td>
+                <td>Медитация помогает развить сострадание к себе и другим.</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Уровень</th>
+                            <th>Совет</th>
+                        </tr>
+                        <tr>
+                            <td>Начинающий</td>
+                            <td>Практикуйте медитацию на любовь к миру 10 минут в день.</td>
+                        </tr>
+                        <tr>
+                            <td>Продвинутый</td>
+                            <td>Используйте техники медитации осознанности в повседневной жизни.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </section>
+
+<script>
+// Функция для приветствия
+function greetUser() {
+    let name = prompt("Введите ваше имя:"); // Метод ввода данных
+    let outputElement = document.getElementById("output"); // Получаем элемент для вывода
+
+    if (name) {
+        outputElement.textContent = "Здравствуйте, " + name + "!";
+    } else {
+        outputElement.textContent = "Имя не введено!"; // Выводим сообщение на сайте
+    }
+    if (name) {
+        alert("Здравствуйте, " + name + "!"); // Вывод приветствия
+    } else {
+        alert("Имя не введено!"); // Вывод сообщения об ошибке
+    }
+}
+
+// Назначение обработчика события
+document.getElementById("myButton").onclick = greetUser;
+</script>
+
+<footer>
+     2025 Мир Медитации</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

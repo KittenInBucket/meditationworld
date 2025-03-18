@@ -1,0 +1,708 @@
+﻿/* Основные стили */
+body {
+    font-family: 'Cambria', Georgia, serif; 
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+}
+
+/* Стили для кнопки ввода имени */
+.greet-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #50b3a2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Cambria', Georgia, serif; /* Шрифт Cambria */
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.greet-button:hover {
+    background: #3a7bd5;
+    transform: translateY(-3px);
+}
+
+.greet-button i {
+    margin-right: 8px;
+}
+
+/* Стили для шапки */
+header {
+    background: linear-gradient(135deg, #50b3a2, #3a7bd5);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 40px; /* отступ слева */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* Стили для навигации */
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+    transform: translateY(-3px); /* Анимация при наведении */
+}
+
+nav ul li a i {
+    margin-right: 8px; /* Отступ между иконкой и текстом */
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover i {
+    transform: rotate(15deg); /* Анимация иконки при наведении */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffdd57;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #ffcc00;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Плавная прокрутка по странице */
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00CC66;
+}
+
+/* Слайдшоу */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 300px; /* Высота слайдшоу */
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Кнопки "Вперед" и "Назад" */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Анимация слайдов */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Секции */
+section {
+    padding: 40px 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #50b3a2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Изображения в секциях */
+.section-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Списки */
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Стили для вложенных таблиц */
+table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table table th, table table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table table th {
+    background: #50b3a2;
+    color: white;
+    font-weight: bold;
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #50b3a2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #3a7bd5;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #50b3a2, #3a7bd5);
+    color: white;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        margin: 10px 15px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    .slideshow-container {
+        height: 200px; /* Уменьшаем высоту слайдшоу для мобильных устройств */
+    }
+}
+/* Стили для секции "О медитации" */
+#about {
+    padding: 40px 100px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 40px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+.about-content {
+    display: flex; /* Используем Flexbox */
+    align-items: center; /* Выравниваем элементы по центру */
+    gap: 20px; /* Расстояние между текстом и изображением */
+}
+
+.about-content p {
+    flex: 1; /* Текст занимает доступное пространство */
+    margin: 0; /* Убираем отступы */
+    padding-right: 20px; /* Отступ справа от текста */
+}
+
+.section-image {
+    width: 400px; /* Ширина изображения */
+    height: 400px; /* Высота изображения */
+    object-fit: cover; /* Обрезаем изображение, чтобы оно заполнило контейнер */
+    border-radius: 50%; /* Делаем изображение круглым */
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* На мобильных устройствах элементы располагаются вертикально */
+        text-align: center; /* Выравниваем текст по центру */
+    }
+
+    .section-image {
+        width: 150px; /* Уменьшаем размер изображения для мобильных устройств */
+        height: 150px; /* Уменьшаем размер изображения для мобильных устройств */
+        margin-top: 20px; /* Отступ сверху */
+    }
+}
+/* Стили для секции "Виды медитации" */
+.meditation-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Расстояние между блоками */
+    justify-content: space-around;
+}
+
+.meditation-type {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 20px); /* 4 колонки на больших экранах */
+    text-align: center;
+}
+
+.meditation-type h3 {
+    font-size: 1.5rem;
+    color: #50b3a2;
+    margin: 15px 0;
+}
+
+.meditation-type p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.meditation-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.meditation-type .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #50b3a2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.meditation-type .button:hover {
+    background: #3a7bd5;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .meditation-type {
+        width: calc(50% - 20px); /* 2 колонки на планшетах */
+    }
+}
+
+@media (max-width: 480px) {
+    .meditation-type {
+        width: 100%; /* 1 колонка на мобильных устройствах */
+    }
+}
+/* Стили для секции "Преимущества медитации" */
+#benefits {
+    padding: 40px 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: #50b3a2;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+table td {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+table tr:hover {
+    background: #f9f9f9;
+}
+
+/* Иконки */
+table td i {
+    margin-right: 10px;
+    color: #50b3a2;
+    font-size: 1.2rem;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    table td i {
+        font-size: 1rem;
+    }
+}
+
+/* Стили для секции "Знаменитости о медитации" */
+#celebrities {
+    padding: 40px 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.celebrities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Расстояние между блоками знаменитостей */
+}
+
+.celebrity {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Расстояние между изображением и текстом */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.celebrity-image {
+    flex: 0 0 300px; /* Фиксированная ширина (300px), не растягивается */
+}
+
+.celebrity-image img {
+    width: 300px; /* Фиксированная ширина */
+    height: 300px; /* Фиксированная высота */
+    object-fit: cover; /* Сохраняет пропорции и заполняет область */
+    border-radius: 10px;
+}
+
+.celebrity-info {
+    flex: 1; /* Текст занимает 50% ширины */
+}
+
+.celebrity h3 {
+    font-size: 1.8rem;
+    color: #50b3a2;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #50b3a2;
+    padding-left: 15px;
+    margin: 15px 0;
+}
+
+.celebrity-bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .celebrity-image img {
+        width: 100%; /* На мобильных устройствах изображение занимает всю ширину */
+        height: auto; /* Высота автоматически подстраивается */
+    }
+
+    .celebrity-image {
+        flex: 0 0 100%; /* На мобильных устройствах изображение занимает всю ширину */
+    }
+}
+
+/* Стили для нумерованного списка */
+ol {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+ol li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Стили для списка определений */
+dl {
+    margin: 20px 0;
+    margin-left: 20px;
+}
+
+dt {
+    font-weight: bold;
+    color: #50b3a2;
+    margin-top: 15px;
+    font-size: 1.9rem;
+}
+
+dd {
+    margin-left: 0px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Стили для таблицы с историей */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.history-table th, .history-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.history-table th {
+    background: #50b3a2;
+    color: white;
+    font-weight: bold;
+}
+
+.history-table td {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.history-table img {
+    width: 200px; /* Увеличиваем размер изображений */
+    height: 150px; /* Фиксированная высота для одинакового размера */
+    object-fit: cover; /* Сохраняет пропорции и заполняет область */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .history-table th, .history-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .history-table img {
+        width: 80px; /* Уменьшаем размер изображений на мобильных устройствах */
+    }
+}
+
+/* Стили для кнопки */
+#myButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #50b3a2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Cambria', Georgia, serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+#myButton:hover {
+    background: #3a7bd5;
+    transform: translateY(-3px);
+}
+
+#myButton:active {
+    transform: translateY(0);
+}
+
+/* Стили для вывода текста */
+#output {
+    font-size: 1.2rem;
+    color: #white;
+    margin-top: 10px;
+    font-weight: bold;
+}
