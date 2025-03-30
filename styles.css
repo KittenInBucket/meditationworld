@@ -1016,3 +1016,152 @@ header {
         max-height: 150px;
     }
 }
+
+/* Стили для секции "Преимущества медитации" */
+#benefits {
+    padding: 30px 15px;
+    margin: 15px 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Основные стили таблицы */
+.benefits-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.benefits-table th, 
+.benefits-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.benefits-table th {
+    background: linear-gradient(135deg, #50b3a2, #3a7bd5);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+}
+
+.benefits-table tr:last-child td {
+    border-bottom: none;
+}
+
+.benefits-table td {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    vertical-align: middle;
+}
+
+.benefits-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.benefits-table tr:hover {
+    background-color: #f0f7f5;
+}
+
+/* Иконки в таблице */
+.benefit-icon {
+    color: #50b3a2;
+    font-size: 1.4rem;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    #benefits {
+        padding: 20px 10px;
+        margin: 10px 0;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .benefits-table {
+        display: block;
+        box-shadow: none;
+        background: transparent;
+    }
+    
+    .benefits-table thead {
+        display: none;
+    }
+    
+    .benefits-table tbody,
+    .benefits-table tr,
+    .benefits-table td {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+    }
+    
+    .benefits-table tr {
+        margin-bottom: 15px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .benefits-table td {
+        padding: 12px 15px;
+        border-bottom: 1px dashed #eee;
+        text-align: right;
+    }
+    
+    .benefits-table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: #50b3a2;
+        margin-right: 10px;
+    }
+    
+    .benefits-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .benefit-icon {
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+    
+    /* Альтернативный цвет для карточек */
+    .benefits-table tr:nth-child(even) {
+        background: #f5fbfa;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .benefits-table td:before {
+        display: block;
+        float: none;
+        text-align: left;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+    
+    .benefits-table td {
+        text-align: left;
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .benefit-icon {
+        font-size: 1.1rem;
+    }
+}
